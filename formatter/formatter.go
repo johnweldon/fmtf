@@ -19,8 +19,11 @@ type Formatter interface {
 // xml and json.
 func NewFormatter() Formatter {
 	return &filterMap{
-		'{': formatJSON,
-		'<': formatXML,
+		'"':  formatJSON,
+		'\'': formatJSON,
+		'[':  formatJSON,
+		'{':  formatJSON,
+		'<':  formatXML,
 	}
 }
 

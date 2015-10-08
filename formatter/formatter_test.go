@@ -7,9 +7,10 @@ import (
 )
 
 var testCase = map[string]string{
-	`{"key1":"val1","key2":"val2"}`: "{\n  \"key1\": \"val1\",\n  \"key2\": \"val2\"\n}",
-	"<root><hi>asdf</hi></root>":    "<root>\n  <hi>asdf</hi>\n</root>",
-	"asdfasdf":                      "asdfasdf",
+	`{"key1":"val1","key2":"val2"}`:     "{\n  \"key1\": \"val1\",\n  \"key2\": \"val2\"\n}",
+	`["item1","item2","item3","item4"]`: "[\n  \"item1\",\n  \"item2\",\n  \"item3\",\n  \"item4\"\n]",
+	"<root><hi>asdf</hi></root>":        "<root>\n  <hi>asdf</hi>\n</root>",
+	"asdfasdf":                          "asdfasdf",
 }
 
 func TestBasic(t *testing.T) {
